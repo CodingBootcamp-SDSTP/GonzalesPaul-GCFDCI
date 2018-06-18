@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<web-app>
+	<display-name>GCFI Website</display-name>
+	<description>Web Content</description>
+	<servlet>
+		<servlet-name>About Gcf</servlet-name>
+		<servlet-class>AboutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>About Gcf</servlet-name>
+		<url-pattern>/about</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>History</servlet-name>
+		<servlet-class>HistoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>History</servlet-name>
+		<url-pattern>/history</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Sunday Service</servlet-name>
+		<servlet-class>ServiceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Sunday Service</servlet-name>
+		<url-pattern>/service</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GCF Gallery</servlet-name>
+		<servlet-class>GalleryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GCF Gallery</servlet-name>
+		<url-pattern>/gallery</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Sermon</servlet-name>
+		<servlet-class>SermonServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Sermon</servlet-name>
+		<url-pattern>/sermon</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Contacts</servlet-name>
+		<servlet-class>ContactsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Contacts</servlet-name>
+		<url-pattern>/contacts</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Announcements</servlet-name>
+		<servlet-class>AnnouncementsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Announcements</servlet-name>
+		<url-pattern>/announcements</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Events</servlet-name>
+		<servlet-class>EventsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Events</servlet-name>
+		<url-pattern>/event</url-pattern>
+	</servlet-mapping>
+</web-app>

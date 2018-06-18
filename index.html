@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gospel of Christ Fellowship, Inc.</title>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1" />
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
+		<script src="function.js"></script>
+		<script>
+			window.onload = function() {
+				document.getElementById('menulink').onclick = function() {
+					var menu = document.getElementById('menu');
+					if(menu.className != 'shownmenu') {
+						menu.className = 'shownmenu';
+					}
+					else {
+						menu.className = 'hiddenmenu';
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<!-- <img id="logo" src="logo.png" alt="logo"> -->
+			<div id="name">Gospel of Christ Fellowship, inc.</div>
+			<div id="menubutton"><a id="menulink" href="#">MENU</a></div>
+			<div id="menu" class="hiddenmenu">
+				<div class="menuitem"><a href="#">HOME</a></div>
+				<div class="menuitem"><a href="/content">About</a></div>
+				<div class="menuitem"><a href="#">Sermons</a></div>
+				<div class="menuitem"><a href="#">Schedules</a></div>
+				<div class="menuitem"><a href="#">Contact us</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="sidebar">
+			<img id="logo" src="logo.png" alt="logo">
+			<p>4B Strategy</p>
+			<p>WE<br>BLESS GOD.<br>WE<br>BRING IN.<br>WE<br>BUILD UP.<br>WE<br>BRANCH OUT.</p>
+		</div>
+		<div id="content">
+			<!-- <div class="menuitem"><a href="" -->
+			<h3>Gospel of Christ Fellowship Vision and Mission Statement</h3>
+			<h4>i. GCF Church Purpose</h4>
+			<p>GCF Church exists to live out the Great Commandment and fulfil the Great Commission.</p>
+			<h4>ii. GCF Vision</h4>
+			<p>Love the Lord Jesus; be like Him and Disciple people to become like Him.</p>
+			<h3>Articulated Vision:</h3>
+			<p>As a Disciple-Making Cell Church, we are committed to.<br>- Love God passionately<br>- Grow I Christ-likeness<br>- Grow together as a loving family<br>- Become a disciple<br>-making people in Outreach & Missions</p>
+			<h3>Vision Statement:</h3>
+			<p>- We trust God to build GCF Church to be:<br>A Disciple-making Cell Church that produces Christ-like <br>worshippers and soul winners to accomplish the Mission God has for us.</p>
+			<h3>iii. GCF Mission:</h3>
+			<p>1. GCF, as a Disciple-making Cell Church, is committed to:<br>a. Transforming lives by Evangelism and Discipleship<br>b. Influencing the Community by advocating the family<br>c. Blessing the nations by establishing local churches<br>2. In short, “Transform Lives, Influence the Community, bless the nations”</p>
+		</div>
+		<div id="footer">
+				<p></p>
+			</div>
+	</body>
+</html>
