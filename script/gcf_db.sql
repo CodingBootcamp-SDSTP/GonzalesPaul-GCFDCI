@@ -23,20 +23,18 @@ INSERT INTO admin_access (id, name, email, username, password, file) VALUES
 CREATE TABLE about (
 	id INT(12) NOT NULL,
 	gcf_mvs VARCHAR(255) NOT NULL,
-	body VARCHAR(255) NOT NULL
+	body TEXT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO about (id, gcf_mvs, body) VALUES (1, 'gcf Mission Vission Statement', 'Save about us');
 INSERT INTO about (id, gcf_mvs, body) VALUES (2, 'i. GCF Church Purpose', 'GCF Church exists to live out the Great Commandment and fulfil the Great Commission');
 INSERT INTO about (id, gcf_mvs, body) VALUES (3, 'ii. GCF Vision', 'Love the Lord Jesus; be like Him and Disciple people to become like Him');
 INSERT INTO about (id, gcf_mvs, body) VALUES (4, 'Articulated Vision: ', 'As a Disciple-Making Cell Church, we are committed to, - Love God passionately - Grow I Christ-likeness - Grow together as a loving family - Become a disciple-making people in Outreach & Missions');
-INSERT INTO about (id, gcf_mvs, body) VALUES (5, 'Vision Statement:', '- We trust God to build GCF Church to be: 
-A Disciple-making Cell Church that produces Christ-like worshippers and soul winners to accomplish the Mission God has for us.');
+INSERT INTO about (id, gcf_mvs, body) VALUES (5, 'Vision Statement:', '- We trust God to build GCF Church to be: A Disciple-making Cell Church that produces Christ-like worshippers and soul winners to accomplish the Mission God has for us.');
 INSERT INTO about (id, gcf_mvs, body) VALUES (6, 'iii. GCF Mission:', '1. GCF, as a Disciple-making Cell Church, is committed to: a. Transforming lives by Evangelism and Discipleship b. Influencing the Community by advocating the family c. Blessing the nations by establishing local churches 2. In short, "Transform Lives, Influence the Community, bless the nations".');
 INSERT INTO about (id, gcf_mvs, body) VALUES (7, 'iv. The Process: 4B Strategy', '1. BLESS GOD- Worship God, Live a Holy Life, Give Generously. 2. BRING IN- Reach Out pre-believers, assimilate them into the church. 3. BUILD UP- Grow them in the Cell, have them empowered by the Holy Spirit, disciple them. 4. BRANCH OUT- Send them to evangelize and disciple others, influence the community and bless the nations.');
 INSERT INTO about (id, gcf_mvs, body) VALUES (8, 'b. Clarify our Mission: i. What are we looking for?', '- We are not after growing our church. We are after people who need the Lord. A Church that reaches out to people and disciple them is a Healthy Church. Church Growth is a natural result.');
-INSERT INTO about (id, gcf_mvs, body) VALUES (9, 'ii. What is a Cell Church?
-- We are not a Church with Cells', 'o Cells are one of the programs. Participation is not compulsory [only 20-30% are in Cells], - We are Church of Cells, o GCF is a Church of Cells. As a Cell Church, Cell is the primary platform we shepherd and disciple our people');
+INSERT INTO about (id, gcf_mvs, body) VALUES (9, 'ii. What is a Cell Church? - We are not a Church with Cells', 'o Cells are one of the programs. Participation is not compulsory [only 20-30% are in Cells], - We are Church of Cells, o GCF is a Church of Cells. As a Cell Church, Cell is the primary platform we shepherd and disciple our people');
 INSERT INTO about (id, gcf_mvs, body) VALUES (10, 'c. Our Core Values determine the kind of church we become', 'i. Cell Leaders must embrace, teach, and model these core values. ii. Core values are beliefs that drive our lives and ministries. iii. With our Core values, we exert great influence in the way we do things in our church. iv. These values drives our decisions, determines our risk level, resolve our conflict, establish our priorities, etc. v. All of these Core Values are equally important');
 INSERT INTO about (id, gcf_mvs, body) VALUES (11, 'VI. GCF Five Core Values', 'a. Dependence on God. b. Living in Community. c. Transformation in People. d. Building family .e. Excellence for God');
 INSERT INTO about (id, gcf_mvs, body) VALUES (12, 'VII. GCF Three Character Values', 'a. Authentic- we are desirous to be TRUE Christians. b. Intentional- we are decisive in our PURPOSE. c. Missional- we are dead to self and SERVANT to others');
@@ -45,7 +43,7 @@ INSERT INTO about (id, gcf_mvs, body) VALUES (12, 'VII. GCF Three Character Valu
 CREATE TABLE history (
 	id INT(11) NOT NULL,
 	date VARCHAR(100) NOT NULL,
-	body VARCHAR(255) NOT NULL
+	body TEXT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO history (id, date, body) VALUES (1, 'September 1996', 'GCFI History');
