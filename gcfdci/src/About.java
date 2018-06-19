@@ -1,11 +1,16 @@
-public class AboutGcfi
+public class About
 {
+	private String id;
 	private String purpose;
 	private String vision;
 	private String mission;
 	private String process;
 	private String corevalues;
 	private String charactervalues;
+
+	public String getId() {
+		return(id);
+	}
 
 	public void setPurpose(String purpose) {
 		this.purpose = purpose;
@@ -45,14 +50,6 @@ public class AboutGcfi
 
 	public String getCoreValues() {
 		return(corevalues);
-	}
-
-	public void setMission(String mission) {
-		this.mission = mission;
-	}
-
-	public String getMission() {
-		return(mission);
 	}
 
 	public void setCharacterValues(String charactervalues) {
