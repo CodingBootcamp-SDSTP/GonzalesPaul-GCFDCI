@@ -1,26 +1,28 @@
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 public class SermonCollection
 {
-	ArrayList<Sermon> sermons;
+	ArrayList<Sermons> sermons;
+	private LocalDate date;
 
 	public SermonCollection() {
-		sermons = new ArrayList<Sermon>();
+		sermons = new ArrayList<Sermons>();
 	}
 
-	public void addSermon(Sermon sermon) {
+	public void addSermons(Sermons sermon) {
 		sermons.add(sermon);
 	}
 
-	public void removeSermon(Sermon sermon) {
+	public void removeSermons(Sermons sermon) {
 		sermons.remove(sermon);
 	}
 
-	public ArrayList<Sermon> getAllSermons() {
+	public ArrayList<Sermons> getAllSermons() {
 		return(sermons);
 	}
 
-	public Sermon getSermonByIndex(int n) {
+	public Sermons getSermonByIndex(int n) {
 		return(sermons.get(n));
 	}
 
@@ -28,19 +30,9 @@ public class SermonCollection
 		return(sermons.size());
 	}
 
-	public Sermon getSermonById(String id) {
-		Sermon sermon = null;
-		for(int i=0; i<getSermonCount(); i++) {
-			if(getSermonByIndex(i).getId().equalsIgnoreCase(id)) {
-				sermon = getSermonByIndex(i);
-			}
-		}
-		return(sermon);
-	}
-
-	public ArrayList<Sermon> search(String s) {
-		Sermon se = null;
-		ArrayList<Sermon> sl = new ArrayList<Sermon>();
+	public ArrayList<Sermons> search(String s) {
+		Sermons se = null;
+		ArrayList<Sermons> sl = new ArrayList<Sermons>();
 		String str = s.toLowerCase();
 		for(int i=0; i<getSermonCount(); i++) {
 			se = getSermonByIndex(i);
@@ -50,13 +42,12 @@ public class SermonCollection
 		}
 		return(sl);
 	}
- 
-	public boolean matches(Sermon s, String str) {
-		String id = s.getId().toLowerCase();
-		String title = s.getTitle().toLowerCase();
-		String filetype = s.getFileType().toLowerCase();
-		LocalDate date = s.getDate();
-		if(id.contains(str) || title.contains(str) || filetype.contains(str) || date.contains(str)) {
+
+	public boolean matches(Sermons c, String str) {
+		String title = c.getTitle().toLowerCase();
+		String filetype = c.getFileType().toLowerCase();
+		LocalDate date = c.getDate();
+		if(title.contains(str) || filetype.contains(str)) {
 			return(true);
 		}
 		return(false);

@@ -41,13 +41,12 @@ public class GalleryCollection
 		return(al);
 	}
 
-	// public boolean matches(Gallery g, String str) {
-	// 	String name = g.getName().toLowerCase();
-	// 	int monetaryValue = g.getMonetaryValue();
-	// 	String ab = Integer.toString(monetaryValue);
-	// 	if(ab.contains(str) || name.contains(str)) {
-	// 		return(true);
-	// 	}
-	// 	return(false);
-	// }
+	public boolean matches(Gallery g, String str) {
+		String caption = g.getCaption().toLowerCase();
+		String filetype = g.getFileType();
+		if(caption.contains(str) || filetype.contains(str)) {
+			return(true);
+		}
+		return(false);
+	}
 }

@@ -3,13 +3,13 @@ import java.time.LocalDate;
 public class Announcements
 {
 	private String title;
-	private String details;
+	private String detailss;
 	private String filetype;
 	private LocalDate date;
 
-	public Announcements(String title, String details, String filetype, LocalDate date) {
+	public Announcements(String title, String detailss, String filetype, LocalDate date) {
 		this.title = title;
-		this.details = details;
+		this.detailss = detailss;
 		this.filetype = filetype;
 		this.date = date;
 	}
@@ -22,12 +22,12 @@ public class Announcements
 		return(title);
 	}
 
-	public void setDetails(String details) {
-		this.details = details;
+	public void setDetailss(String detailss) {
+		this.detailss = detailss;
 	}
 
-	public String getDetails() {
-		return(details);
+	public String getDetailss() {
+		return(detailss);
 	}
 
 	public void setFileType(String filetype) {
@@ -46,4 +46,11 @@ public class Announcements
 		return(date);
 	}
 
+	public String toString() {
+		return("<Title>" + title + "</title>" + "<Details>" + detailss + "</Details>" + "<FileType>" + filetype + "</FileType>" + "<Date>" + date + "</Date>");
+	}
+
+	public String getDetails() {
+		return(title + "@" + detailss + "@" + filetype + "@" + date + "@announcements");
+	}
 }

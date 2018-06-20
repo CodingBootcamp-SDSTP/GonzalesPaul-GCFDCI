@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Content
 {
 	private String title;
-	private String details;
+	private String detailss;
 	private LocalDate date;
 
 	public void setTitle(String title) {
@@ -14,12 +14,12 @@ public class Content
 		return(title);
 	}
 
-	public void setDetails(String details) {
-		this.details = details;
+	public void setDetailss(String detailss) {
+		this.detailss = detailss;
 	}
 
-	public String getDetails() {
-		return(details);
+	public String getDetailss() {
+		return(detailss);
 	}
 
 	public void setDate(LocalDate date) {
@@ -31,10 +31,10 @@ public class Content
 	}
 
 	public String toString() {
-		return("Title: " + title + ", Details: " + details + ", Date: " + date);
+		return("Title: " + title + ", Details: " + detailss + ", Date: " + date);
 	}
 
 	public String getDetails() {
-		return(title + "@" + date);
+		return(title + "@" + detailss + "@" + date);
 	}
 }

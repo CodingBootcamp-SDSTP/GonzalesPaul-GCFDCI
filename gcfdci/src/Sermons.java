@@ -2,24 +2,14 @@ import java.time.LocalDate;
 
 public class Sermons
 {
-	private String ID;
 	private String title;
 	private String filetype;
 	private LocalDate date;
 
-	public Sermons(String id, String t, String ft, LocalDate date) {
-		ID = id;
+	public Sermons(String t, String ft, LocalDate date) {
 		title = t;
 		filetype = ft;
 		this.date = date;
-	}
-
-	public void setId(String id) {
-		this.ID = id;
-	}
-
-	public String getId() {
-		return(ID);
 	}
 
 	public void setTitle(String t) {
@@ -44,5 +34,13 @@ public class Sermons
 
 	public LocalDate getDate() {
 		return(date);
+	}
+
+	public String toString() {
+		return("<Title>" + title + "</Title>" + "<FileType>" + filetype + "</FileType>" + "<Date>" + date + "</Date>");
+	}
+
+	public String getDetails() {
+		return(title + "@" + filetype + "@" + date + "@sermons");
 	}
 }

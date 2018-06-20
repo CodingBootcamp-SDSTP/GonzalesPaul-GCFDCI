@@ -72,14 +72,15 @@ INSERT INTO life_verse (id, verse, chapter) VALUES
 
 
 CREATE TABLE gallery (
-	id INT(11) NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
 	caption VARCHAR(225) NOT NULL,
-	file VARCHAR(255) NOT NULL
+	file VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id)
 ) ENGINE=MongoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO gallery (id, caption, file) VALUES
-(1, 'With the bishop', '1_2.png'),
-(2, 'I was there that day', 'efa_c69c.jpg');
+INSERT INTO gallery (caption, file) VALUES
+('With the bishop', '1_2.png'),
+('I was there that day', 'efa_c69c.jpg');
 
 
 CREATE TABLE sermons (
@@ -95,7 +96,7 @@ INSERT INTO sermons (title, file, `date`) VALUES
 
 
 CREATE TABLE contact (
-	id int(12) NOT NULL,
+	id INT(12) NOT NULL,
 	telephone INT(12) NOT NULL,
 	cell_number INT(12) NOT NULL,
 	email VARCHAR(255) NOT NULL

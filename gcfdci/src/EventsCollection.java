@@ -3,38 +3,38 @@ import java.time.LocalDate;
 
 public class EventsCollection
 {
-	ArrayList<Event> events;
+	ArrayList<Events> events;
 	
-	public EventCollection() {
-		events = new ArrayList<Event>();
+	public EventsCollection() {
+		events = new ArrayList<Events>();
 	}
 
-	public void addEvent(Event event) {
+	public void addEvents(Events event) {
 		events.add(event);
 	}
 
-	public void removeEvent(Event event) {
+	public void removeEvents(Events event) {
 		events.remove(event);
 	}
 
-	public ArrayList<Event> getAllEvents() {
+	public ArrayList<Events> getAllEvents() {
 		return(events);
 	}
 
-	public Event getEventByIndex(int n) {
+	public Events getEventsByIndex(int n) {
 		return(events.get(n));
 	}
 
-	public int getEventCount() {
+	public int getEventsCount() {
 		return(events.size());
 	}
 
-	public ArrayList<Event> search(String s) {
-		Event e = null;
-		ArrayList<Event> ae = new ArrayList<Event>();
+	public ArrayList<Events> search(String s) {
+		Events e = null;
+		ArrayList<Events> ae = new ArrayList<Events>();
 		String str = s.toLowerCase();
-		for(int i=0; i<getEventCount(); i++) {
-			e = getEventByIndex(i);
+		for(int i=0; i<getEventsCount(); i++) {
+			e = getEventsByIndex(i);
 			if(matches(e, str)) {
 				ae.add(e);
 			}
@@ -42,14 +42,13 @@ public class EventsCollection
 		return(ae);
 	}
 
-	public boolean matches(Event e, String str) {
-		String id = e.getId().toLowerCase();
-		String title = e.getTitle().toLowerCase();
-		String details = e.getDetails().toLowerCase();
-		LocalDate date_time = e.getDate();
-		String venue = e.getVenue().toLowerCase();
-		String phone = Integer.toString(phone);
-		if(id.contains(str) || title.contains(str) || details.contains(str) || date_time.contains(LocalDate) || venue.contains(str) || phone.contains(str)) {
+	public boolean matches(Events es, String str) {
+		String title = es.getTitle().toLowerCase();
+		String details = es.getDetails().toLowerCase();
+		String venue = es.getVenue().toLowerCase();
+		int phone = es.getPhone();
+		String p = Integer.toString(phone);
+		if(title.contains(str) || details.contains(str) || venue.contains(str) || p.contains(str)) {
 			return(true);
 		}
 		return(false);
